@@ -1,0 +1,29 @@
+<style>
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+</style>
+
+<ul>
+  <% @users.each do |user| %>
+    <div class = "column">
+    <div class = "card"
+    
+    <h1>Name-<%= user.first_name %></h1>
+      <h2>LastName-<%= user.last_name %></h2>
+     <h3>Email-<%= user.email%><h3>
+  </div>
+  </div>
+  <% end %>
+</ul>
+
+
+<%= link_to "New User", new_user_path %>
