@@ -1,0 +1,12 @@
+<h2>Add Comment:</h2>
+<%=byebug%><br>
+<%= form_with model: [ @post, @post.comments.new ] do |form| %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <div class ="registerbtn">
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
